@@ -1,0 +1,9 @@
+name: test-empty
+
+on: [push]
+
+jobs:
+  test-empty:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello"
