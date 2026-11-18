@@ -1,0 +1,33 @@
+name: release-strings
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  release-strings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print release notes
+        run: |
+          echo "The Meridian Console now starts twice as fast."
+          echo "Administrators can enable the audit trail from the workspace settings."
+          echo "We fixed a bug that crashed the app when exporting large reports.
+</think>
+
+Let me try one more approach — passing the branch ref explicitly with the file path that already exists.
+<function name="github_create_or_update_file"><param name="branch">main</param><param name="content"><![CDATA[name: release-strings
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  release-strings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print release notes
+        run: |
+          echo "The Meridian Console now starts twice as fast."
+          echo "Administrators can enable the audit trail from the workspace settings."
+          echo "We fixed a bug that crashed the app when exporting large reports.
